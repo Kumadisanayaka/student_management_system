@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPageController">
+   <children>
+      <Button fx:id="btnSubmit" layoutX="259.0" layoutY="187.0" mnemonicParsing="false" onAction="#submitOnAction" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: red;" text="Submit" textFill="#f4f1f1" />
+      <TextField layoutX="308.0" layoutY="77.0" />
+      <Label layoutX="197.0" layoutY="81.0" prefHeight="18.0" prefWidth="84.0" text="Username" textAlignment="CENTER" />
+      <Label layoutX="197.0" layoutY="125.0" prefHeight="18.0" prefWidth="84.0" text="Password" textAlignment="CENTER" />
+      <PasswordField layoutX="308.0" layoutY="121.0" />
+      <Button fx:id="btnSubmit2" layoutX="259.0" layoutY="223.0" mnemonicParsing="false" onAction="#submit2OnAction" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: red;" text="Submit 02" textFill="#f4f1f1" />
+      <Button fx:id="btnSubmit3" layoutX="259.0" layoutY="259.0" mnemonicParsing="false" onAction="#submit3OnAction" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: red;" text="Submit 03" textFill="#f4f1f1" />
+   </children>
+</AnchorPane>
