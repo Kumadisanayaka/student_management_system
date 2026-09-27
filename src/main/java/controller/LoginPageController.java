@@ -2,38 +2,39 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class LoginPageController {
 
-    @FXML
-    private Button btnSubmit;
+    LoginController loginController = new LoginController();
 
-    @FXML
-    private Button btnSubmit2;
 
-    @FXML
-    private Button btnSubmit3;
+    public TextField txtusername;
+    public PasswordField txtps;
 
-    @FXML
-    void submit2OnAction(ActionEvent event) {
 
-        System.out.println("sub2 clicked!");
+    public void loginOnAction(ActionEvent actionEvent) {
 
-    }
 
-    @FXML
-    void submit3OnAction(ActionEvent event) {
+        if (loginController.checkUserNameAndPassword(txtusername.getText(),txtps.getText())){
 
-        System.out.println("sub3 clicked!");
-
-    }
-
-    @FXML
-    void submitOnAction(ActionEvent event) {
-
-        System.out.println("Submit clicked!");
+            Stage stage = new Stage();
+            try {
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage.show();
+        }
 
     }
+
 
 }
